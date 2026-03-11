@@ -1,0 +1,884 @@
+/*
+
+   Dark Purple - #500878
+   Deep Purple - #3C1053
+
+   black - #000000
+   grey - #666666
+
+
+   Disabled Purple - d27bd2
+
+*/
+
+html {
+  /* default font-size is 16px - this is set in the default browser stylesheet */
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+   height: 100%;
+}
+
+body {
+   background-color: #fff;
+   font-family: sans-serif;
+   overflow: hidden;
+   height: 100%;
+   font-family: 'Open Sans', sans-serif;
+}
+
+
+
+body.landing {
+   background-image: url(../media/landing-background.jpg);
+   background-size: 100%;
+}
+
+body.landing .landing-holder {
+   background: #ffffff;
+   text-align: center;
+   padding: 3%;
+   max-width: 650px;
+}
+
+
+body.landing .form-check {
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+
+
+body.landing .form-check, body.landing .form-check-label {
+   cursor: pointer;
+}
+
+
+
+
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: 'Exo 2', sans-serif;
+   color: #500878;
+}
+
+
+
+input[type="text"],
+textarea {
+   outline: none;
+   box-shadow: none !important;
+   border: 1px solid #ccc !important;
+}
+
+.btn:focus,
+.btn:active {
+   outline: none !important;
+   box-shadow: none;
+}
+
+
+.ie-header {
+   background-color: #500878;
+}
+
+.ie-header .oi {
+    top: 0px;
+    font-size: 0.75rem;
+    padding-right: 3px;
+}
+
+
+
+
+.ie-header a {
+   font-family: 'Exo 2', sans-serif;
+   color: #ffffff;
+   text-decoration: none;
+}
+
+.ie-menu-main {
+   padding-right: 0px;
+   padding-left: 0px;
+   font-family: 'Exo 2', sans-serif;
+}
+
+.ie-menu-main div.dropdown-menu span.oi {
+   display: inline-block;
+   float: right;
+   top: 7px;
+}
+
+.dropdown-menu {
+  background-color: #ffffff;
+}
+
+.dropdown.show a {
+   background-color: #ffffff;
+   color: #3C1053;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #3C1053;
+}
+
+.nav-link:focus, .nav-link:hover {
+    text-decoration: none;
+    background: #3C1053;
+}
+
+
+
+.ie-menu-title-holder {
+
+}
+
+.ie-menu-title-holder .nav-item {
+   width: 100%;
+   color: #ffffff;
+   text-align: center;
+   font-family: 'Exo 2', sans-serif;
+}
+
+
+.ie-menu-program {
+   padding-right: 0px;
+   padding-left: 0px;
+}
+
+.ie-menu-program .nav-pills {
+   float: right;
+   font-family: 'Exo 2', sans-serif;
+}
+
+
+.ie-body {
+
+}
+
+
+.blocklyToolboxDiv {
+   box-sizing: unset !important;
+/*   margin: 5px !important; */
+}
+
+
+
+
+.ie-footer {
+   height: 25%;
+}
+
+.ie-footer .row {
+   height: 100%;
+}
+
+.ie-errors {
+   background-color: #eaeaea;
+   padding: 0.5em;
+   overflow-y: scroll;
+}
+
+.ie-errors a#errorsText {
+
+}
+
+.ie-errors a#errorsText .alert {
+   padding: .25rem 0.75rem;
+   margin-bottom: 0.5rem;
+}
+
+
+.ie-errors a#errorsText .alert .oi {
+   padding-right: 0.5rem;
+}
+
+
+
+
+
+
+.modal-header {
+   background-color: #500878;
+   color: #ffffff;
+   padding: 25px;
+}
+
+.modal-header h5.modal-title {
+   font-size: 1.125em;
+   color: #ffffff;
+}
+
+.modal-header .close {
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 0 1px 0 #ccc;
+    opacity: .5;
+}
+
+.modal-body {
+   padding: 25px;
+}
+
+.modal-body a {
+   color: #500878;
+   text-decoration: none;
+   background-color: transparent;
+}
+
+.modal-body a:hover {
+   color: #3C1053;
+   text-decoration: none;
+   background-color: transparent;
+}
+
+
+.ie-actions-var,
+.ie-actions-snip {
+   text-align: right;
+}
+
+
+#divProgramNameMessageLocal {
+   margin-top: 0.5rem;
+   font-size: 0.85rem;
+   padding: .25rem 0.75rem;
+}
+
+
+#divCreateVarsMessage,
+#divCreateSnipMessage {
+   margin-top: 0.5rem;
+   font-size: 0.85rem;
+   padding: .25rem 0.75rem;
+}
+
+
+.ie-manage-var-feedback,
+.ie-manage-snip-feedback {
+   margin-top: 0.5rem;
+   font-size: 0.85rem;
+   padding: .25rem 0.75rem;
+   width: 100%;
+}
+
+
+
+.btn-primary {
+   color: #fff;
+   background-color: #500878;
+   border-color: #500878;
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled,
+.btn-primary.disabled:hover,
+.btn-primary:disabled:hover {
+    color: #fff;
+    background-color: #d27bd2;
+    border-color: #d27bd2;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active,
+.btn-primary:not(:disabled):not(.disabled):active,
+.show>.btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #BB29BB !important;
+    border-color: #BB29BB !important;
+}
+
+.btn-primary:hover {
+   color: #fff;
+   background-color: #BB29BB;
+   border-color: #BB29BB;
+}
+
+
+.btn-primary.focus, .btn-primary:focus {
+    color: #fff;
+    background-color: #BB29BB;
+    border-color: #BB29BB;
+}
+
+
+
+
+div#fuButtonsHolder {
+   padding-bottom: 1em;
+}
+
+
+div#fuButtonsHolder button {
+   width: 33%;
+   text-align: left;
+}
+
+div#fuButtonsHolder button span.oi {
+   float: right;
+   top: 4px;
+}
+
+
+
+#btnFUDownload {
+   background-color: #ffffff;
+   border-color: #ffffff;
+   color: #500878;
+}
+
+
+
+
+
+
+.rotate {
+   animation: rotation 1s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+
+
+#fuStatusHolder {
+   display: block;
+   font-family: monospace;
+   overflow-y: scroll;
+   display: block;
+   font-family: monospace;
+   max-height: 200px;
+}
+
+#fuStatusHolder.card {
+   background-color: #f5f5f5;
+   border: 1px solid #e3e3e3;
+}
+
+#fuStatusHolder.card span#fuStatusConnectionStatus.isConnected {
+   color: #457640;
+}
+
+#fuStatusHolder.card span#fuStatusConnectionStatus.notConnected {
+   color: #b3454f;
+}
+
+
+
+#fuStatusHolder.card div.card-body-line-error {
+   color: #853737;
+}
+
+#fuStatusHolder.card div.card-body-line-success {
+   color: green;
+}
+
+#fuStatusHolder.card div.card-body-line-info {
+   color: #212529;
+}
+
+#fuStatusHolder.card div.card-body-line-prompt {
+   color: #212529;
+}
+
+
+#btnStatusHubConnect {
+   margin-bottom: 15px;
+   text-align: center;
+   width: 100%;
+}
+
+
+
+
+
+
+#hubStatusHolder {
+   display: block;
+   font-family: monospace;
+}
+
+#hubStatusHolder.card {
+   background-color: #f5f5f5;
+   border: 1px solid #e3e3e3;
+}
+
+#hubStatusHolder.card span#hubStatusConnectionStatus.isConnected {
+   color: #457640;
+}
+
+#hubStatusHolder.card span#hubStatusConnectionStatus.notConnected {
+   color: #b3454f;
+}
+
+#btnStatusHubConnect {
+   margin-bottom: 15px;
+   text-align: center;
+   width: 100%;
+}
+
+
+
+#apiStatusHolder, #programStatusHolder {
+   display: block;
+   font-family: monospace;
+   margin-bottom: 25px;
+}
+
+#fromUSBdataHolder {
+   display: block;
+   margin-bottom: 0;
+}
+
+
+
+#apiStatusHolder.card, #programStatusHolder.card {
+   background-color: #f5f5f5;
+   border: 1px solid #e3e3e3;
+}
+
+#fromUSBdataHolder.card {
+   background-color: #f5f5f5;
+   border: 1px solid #e3e3e3;
+   padding: 10px;
+}
+
+
+#fromUSBdataHolder.card div.card-body {
+   padding: 0;
+}
+
+
+
+#runUSB {
+   margin-right: 20px;
+}
+
+
+
+#SendUSBData {
+   font-family: monospace;
+   height: 47px;
+   padding: 0px 10px 0px 10px;
+   background-color: #f5f5f5;
+   border: 1px solid #e3e3e3;
+   margin-right: 20px;
+}
+
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+   opacity: 1;
+}
+
+
+
+#fromUSBdata {
+   font-family: monospace;
+   background-color: #f5f5f5;
+   border: none !important;
+   width: 100%;
+   height: 100px;
+}
+
+
+
+
+
+#modalUSB div.usb-connect, #modalUSB div.usb-send {
+   padding: 0;
+   margin-bottom: 25px;
+}
+
+
+#modalUSB div.usb-response {
+   padding: 0;
+   margin-bottom: 0;
+}
+
+
+#modalUSB div.usb-actions {
+
+}
+
+
+#modalUSB div.usb-connect span.label, #modalUSB div.usb-send span.label, #modalUSB div.usb-response span.label {
+   padding: 0;
+   margin-bottom: 5px;
+   display: block;
+   font-weight: 900;
+}
+
+
+
+#modalUSB div.usb-connect span.usb-status {
+   margin-left: 20px;
+}
+
+
+
+.blinking {
+   -webkit-animation: 2s blink ease infinite;
+   -moz-animation: 2s blink ease infinite;
+   -ms-animation: 2s blink ease infinite;
+   -o-animation: 2s blink ease infinite;
+   animation: 2s blink ease infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+
+
+
+
+
+
+#modalUSB div.usb-actions button {
+   border: 30px red solid;
+}
+
+
+
+#modalUSB div.usb-actions button {
+   border: 30px red solid;
+}
+
+
+div.usb-actions-buttons {
+   padding: 0;
+}
+
+
+div.usb-actions-buttons .btn-primary {
+
+
+   background: #e3e3e3;
+   border: #f5f5f5;
+   color: #212527;
+   text-transform: uppercase;
+   font-size: 10px;
+
+
+
+}
+
+
+#divProgrammingMessage {
+
+}
+
+#divProgrammingMessage div.info {
+
+}
+
+#divProgrammingMessage div.error {
+   color: #b3454f;
+}
+
+#divProgrammingMessage div.success {
+   color: #457640;
+}
+
+
+
+#apiStatusOutput {
+
+}
+
+#divServerResult { }
+
+#spanServerResultLocation span {
+	top: -2px !important;
+	left: 8px !important;
+}
+
+.spanServerResultLocationSuccess {
+	color: #457640;
+}
+
+.spanServerResultLocationError {
+	color: #b3454f;
+}
+
+
+#divCompileResult { }
+
+#spanCompileResultDetails span {
+	top: -2px !important;
+	left: 8px !important;
+}
+
+
+#spanErrorWav {
+	display: block;
+	text-align: center;
+	padding: 1.5em;
+	background: #f9f9f9;
+	border-top: 1px solid #e5e5e5;
+}
+
+#spanErrorWav .btn {
+
+}
+
+
+
+#modalLoadLocal { }
+
+#modalLoadLocal .load-file-element  {
+   padding: 0;
+   margin: 0;
+   text-align: right;
+
+}
+
+#modalLoadLocal .load-file-element  [type="file"] {
+   height: 0;
+   overflow: hidden;
+   width: 0;
+}
+
+
+#modalLoadLocal .load-file-element [type="file"] + label {
+   color: #fff;
+   background-color: #337ab7;
+   border-color: #2e6da4;
+   border-radius: 5px;
+   font-weight: 400;
+   cursor: pointer;
+   display: inline-block;
+   margin-bottom: 0.5em;
+   outline: none;
+   padding: 0.5em 1em 0.5em 1em;
+   position: relative;
+   transition: all 0.3s;
+   text-align: center;
+   width: 90%;
+}
+
+
+#modalLoadLocal .load-file-element [type="file"] + label:hover {
+   background-color: #286090;
+   border-color: #204d74;
+}
+
+#modalLoadLocal #modalLoadLocalWarning {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    padding: .25rem 0.75rem;
+}
+
+#modalLoadLocal #modalLoadLocalDetails {
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    padding: .25rem 0.75rem;
+}
+
+#modalLoadLocal .load-file-feedback {
+   margin-left: 0;
+   margin-right: 0;
+   padding: 0;
+   margin-top: 20px;
+}
+
+
+
+#modalLoadLocal .load-file-feedback mark.alert {
+   width: 100%;
+   display: block;
+}
+
+
+
+
+
+
+
+
+
+#importExport {
+   display: none;
+   font-family: monospace;
+   width: 100%;
+   height: 100%;
+}
+
+#blocklyDiv {
+   height: 75%;
+   width: 100%;
+}
+
+
+#collaborators {
+   float: right;
+   width: 30px;
+   margin-left: 10px;
+}
+
+#collaborators > img {
+   margin-right: 5px;
+   height: 30px;
+   padding-bottom: 5px;
+   width: 30px;
+   border-radius: 3px;
+}
+
+#SetMotors{
+   visibility:hidden;
+}
+
+
+input.txtRenameVarsInput {
+   position: relative;
+   left: -5px;
+}
+
+
+.ie-name-var,
+.ie-name-snip {
+   padding-left: 0;
+}
+
+.ie-actions-var,
+.ie-actions-snip {
+   padding-right: 0;
+}
+
+
+
+
+.ie-delete-var-confirm,
+.ie-delete-snip-confirm {
+	cursor: pointer;
+	color: green;
+}
+
+.ie-delete-var-confirm:hover,
+.ie-delete-snip-confirm:hover {
+	text-decoration: underline;
+}
+
+.ie-delete-var-cancel,
+.ie-delete-snip-cancel {
+	cursor: pointer;
+	color: red;
+}
+
+.ie-delete-var-cancel:hover,
+.ie-delete-snip-cancel:hover {
+	text-decoration: underline;
+}
+
+.ie-list-item {
+   margin-bottom: 10px !important;
+}
+
+
+.ie-name-var-title,
+.ie-name-snip-title {
+   text-align: left;
+   padding-left: 0;
+   opacity: 0.5;
+   margin-bottom: 10px;
+}
+
+.ie-name-var-action,
+.ie-name-snip-action {
+   text-align: right;
+   padding-right: 0;
+   opacity: 0.5;
+   margin-bottom: 10px;
+}
+
+#demo-program-list div.container {
+   padding-right: 0px;
+   padding-left: 0px;
+}
+
+#demo-program-list div.container div.row {
+   border-bottom: solid 1px #ebebeb;
+   padding-bottom: 10px;
+   margin-bottom: 10px;
+}
+
+#demo-program-list div.container div.row:last-child {
+   border-bottom: none;
+   margin-bottom: 0px;
+   padding-bottom: 0px;
+}
+
+#demo-program-list div.container div.row span.spanDemoProgramName {
+   display: block;
+   font-weight: 600;
+}
+
+#demo-program-list div.container div.row span.spanDemoProgramName:hover {
+   cursor: pointer;
+}
+
+#demo-program-list div.container div.row span.spanDemoProgramLoad {
+   font-size: 85%;
+   display: block;
+}
+
+#demo-program-list div.container div.row span.spanDemoProgramLoad:hover {
+   cursor: pointer;
+}
+
+#demo-program-list div.container div.row span.spanDemoProgramDesc {
+   font-size: 85%;
+   display: block;
+}
+
+#demo-program-list div.container div.row .btnDemoProgramLoad {
+   float: right;
+}
