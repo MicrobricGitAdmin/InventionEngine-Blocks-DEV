@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Vertical Playground</title>
+    <!-- core environment code includes -->
+    <script src="closure/goog/base.js"></script>
+    <script src="blockly_compressed_vertical.js"></script>
+
+    <script src="msg/messages.js"></script>
+    <script src="blocks_compressed.js"></script>
+    <script src="blocks_compressed_vertical.js"></script>
+
+    <script src="InventionEngineC_compressed.js"></script>
+    <!-- translatable text include -->
+
+    <!-- dynamic catagory code includes -->
+    <script src="LEDsFlyOut.js"></script>
+    <script src="SetUpFlyOut.js"></script>
+    <script src="MotionFlyOut.js"></script>
+    <script src="SoundsFlyOut.js"></script>
+    <script src="SensorsFlyOut.js"></script>
+    <script src="AdvancedFlyOut.js"></script>
+    <!-- utility code includes -->
+    <script src="IEWebUSB.js"></script>
+    <script src="IEScratchLocalSaves.js"></script>
+    <script src="WorkspaceSetupJs.js"></script>
+    <script src="errorChecking.js"></script>
+    <script src="demoPrograms.js"></script>
+
+
+
+
+    <!-- <script src="../blockly_uncompressed_vertical.js"></script>
+    <script src="../msg/messages.js"></script>
+    <script src="../blocks_common/math.js"></script>
+    <script src="../blocks_common/text.js"></script>
+    <script src="../blocks_common/colour.js"></script>
+    <script src="../blocks_vertical/control.js"></script>
+    <script src="../blocks_vertical/event.js"></script>
+    <script src="../blocks_vertical/Setup.js"></script>
+    <script src="../blocks_vertical/drive.js"></script>
+    <script src="../blocks_vertical/pen.js"></script>
+    <script src="../blocks_vertical/looks.js"></script>
+    <script src="../blocks_vertical/motion.js"></script>
+    <script src="../blocks_vertical/procedures.js"></script>
+    <script src="../blocks_vertical/operators.js"></script>
+    <script src="../blocks_vertical/comment.js"></script>
+    <script src="../blocks_vertical/sound.js"></script>
+    <script src="../blocks_vertical/sensing.js"></script>
+    <script src="../blocks_vertical/data.js"></script>
+    <script src="../blocks_vertical/default_toolbox.js"></script>
+
+	<script src="../blocks_vertical/leds.js"></script>
+    <script src="../blocks_vertical/Advanced.js"></script>
+
+
+
+    <script src="../generators/InventionEngineC.js"></script>
+    <script src="../generators/IEC/Setup.js"></script>
+    <script src="../generators/IEC/Events.js"></script>
+    <script src="../generators/IEC/Motion.js"></script>
+    <script src="../generators/IEC/Math.js"></script>
+    <script src="../generators/IEC/LEDs.js"></script>
+    <script src="../generators/IEC/Sounds.js"></script>
+    <script src="../generators/IEC/Comments.js"></script>
+    <script src="../generators/IEC/Data.js"></script>
+    <script src="../generators/IEC/Control.js"></script>
+    <script src="../generators/IEC/Sensors.js"></script>
+    <script src="../generators/IEC/Advanced.js"></script>
+    <script src="../generators/IEC/Operators.js"></script> -->
+
+
+    <style>
+      html, body {
+        height: 100%;
+      }
+
+      body {
+        background-color: #fff;
+        font-family: sans-serif;
+        overflow: hidden;
+      }
+
+      h1 {
+        font-weight: normal;
+        font-size: 140%;
+        height: auto;
+      }
+
+      #blocklyDiv {
+
+        height: 75%;
+        width: 100%;
+      }
+
+      #collaborators {
+        float: right;
+        width: 30px;
+        margin-left: 10px;
+      }
+
+      #collaborators > img {
+        margin-right: 5px;
+        height: 30px;
+        padding-bottom: 5px;
+        width: 30px;
+        border-radius: 3px;
+      }
+
+	  #SetMotors{
+		visibility:hidden;
+	  }
+
+      #importExport {
+        font-family: monospace;
+      }
+
+	  /* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    </style>
+  </head>
+
+  <body onload="start()">
+    <div id="collaborators"></div>
+
+
+    <!-- Sidebar
+    <h1>Vertical Blocks</h1>-->
+    <!--<p>
+      <a href="javascript:void(workspace.setVisible(true))">Show</a>
+      - <a href="javascript:void(workspace.setVisible(false))">Hide</a>
+    </p>
+
+    <form id="options">
+        <select name="dir" onchange="document.forms.options.submit()">
+          <option value="ltr">LTR</option>
+          <option value="rtl">RTL</option>
+        </select>
+        <select name="toolbox" onchange="document.forms.options.submit()">
+          <option value="categories">Categories</option>
+          <option value="simple">Simple</option>
+        </select>
+        <select name="side" onchange="document.forms.options.submit()">
+          <option value="start">Start</option>
+          <option value="end">End</option>
+          <option value="top">Top</option>
+          <option value="bottom">Bottom</option>
+        </select>
+    </form>-->
+
+    <p>
+        <input type="button" value="New" onclick="clearBlocks()">
+      <input type="button" value="to XML" onclick="toXml()">
+      <input type="button" value="load demo" onclick="loadDemo(0)" id="import">
+      <input type="button" value="C code" onclick="toCode('InventionEngineC')">
+
+
+      load from file:
+	  <label class="myLabel">
+	  <input type="file" id="filesBob" name="files[]"  accept=".txt,.xml" class = "fileBob"/><!--multiple -->
+	  <!--<span>My Label</span>-->
+      <output id="list"></output>
+      BTOA:
+	<input type="button" value="TObase64" onclick="toBase64Blocks()">
+	<input type="button" value="FROMbase64" onclick="fromBase64Blocks()">
+	  </label>
+      <!--<input type="button" value="getFirmwareVersion" onclick="getInventionEngineFirmwareVersion()" >
+      <input type="button" value="Compile and send" onclick="compileAndSend()" style="float:right">-->
+      &nbsp;
+      <input type="button" value="firmware update" onclick="updateInventionEngine()" >
+
+      <input type="button" value="Program" onclick="programInventionEngine()" style="float:right">
+      <br>
+  </p>
+
+      <div id="blocklyDiv"></div>
+      <div id="usb controls" style="width: 18%; height: 10em; float:left ">
+          <div style="text-align: center; ">USB Data </div>
+          <input type="button" value="run USB" onclick="" id="runUSB"><br>
+          USB status: <a id="statusText">not running</a><br>
+          <input type="number" id="SendUSBData" name="quantity" min="-30000" max="30000">
+          <input type="button" value="Send to USB" onclick="sendDataButtonPressed()" id="SendUsb">
+          <br>
+          Data from USB:
+          <textarea id="fromUSBdata" style="width: 100%; height: 6em;"></textarea>
+      </div>
+      <a id="errorsText" style="width: 45%; height: 10em; float:left "></a>
+
+      <textarea id="importExport" style="width: 30%; height: 12em; float:right"
+        onchange="taChange();" onkeyup="taChange()"></textarea>
+
+<!--
+    <hr>
+
+    <p>
+      Log events: &nbsp;
+      <input type="checkbox" onclick="logEvents(this.checked)" id="logCheck">
+    </p>
+
+    <p>
+      <input type="button" value="Undo" onclick="workspace.undo()" />
+      <input type="button" value="Redo" onclick="workspace.undo(true)" />
+    </p>-->
+
+
+	<!-- The Modal -->
+	<div id="myModal" class="modal">
+
+	<!-- Modal content -->
+	<div class="modal-content">
+		<span class="close">&times;</span>
+		<p>Some text in the Modal..</p>
+	</div>
+
+	</div>
+  </body>
+  <script>
+  var inputFile = document.getElementById("filesBob");
+  inputFile.addEventListener('change', handleFileSelect, false);
+  </script>
+</html>
